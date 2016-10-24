@@ -1,4 +1,3 @@
-import sys
 import io
 import fizzbuzz
 
@@ -14,7 +13,7 @@ def test_fizzbuzz():
     assert fizzbuzz.translate_fibonacci(11) == 'BuzzFizz'
     assert fizzbuzz.translate_fibonacci(104) == 104
 
-    assert fizzbuzz.is_prime(20) == False
-    assert fizzbuzz.is_prime(13) == True
+    assert not fizzbuzz.is_prime(20)
+    assert fizzbuzz.is_prime(13)
 
-    assert list(fizzbuzz.generate_fibonacci(8)) == [1,1,2,3,5,8,13,21]
+    assert list(fizzbuzz.generate_fibonacci(8)) == [1, 1, 2, 3, 5, 8, 13, 21]

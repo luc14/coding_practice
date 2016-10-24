@@ -1,13 +1,13 @@
-import sys
-import io
+'''generates, translates and prints Fibonacci numbers
+'''
 def generate_fibonacci(n):
     '''yields n fibonacci numbers.
     '''
     for i in range(n):
-        if i <2:
+        if i < 2:
             yield 1
             continue
-        if i ==2:
+        if i == 2:
             f1, f2 = 1, 1
         f1, f2 = f2, f1+f2
         yield f2
@@ -17,7 +17,7 @@ def is_prime(n):
     '''
     if n == 1:
         return False
-    for i in range(2,int(n**0.5)+1):
+    for i in range(2, int(n**0.5)+1):
         if n%i == 0:
             return False
     return True
@@ -50,4 +50,3 @@ def print_result(n, where=None):
     for f in generate_fibonacci(n):
         result = translate_fibonacci(f)
         print(result, file=where)
-
